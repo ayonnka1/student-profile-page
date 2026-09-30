@@ -1,224 +1,83 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа — Жакыпова А.</title>
-    <!-- Подключаем другой современный шрифт Trebuchet MS / Segoe UI -->
-    <style>
-        :root {
-            /* Новая палитра: индиго + ярко-голубой + мягкий фон */
-            --main-bg: #eef2f6;          
-            --card-bg: #ffffff;           
-            --accent-primary: #2563eb;   /* Насыщенный индиго-синий */
-            --accent-light: #dbeafe;     
-            --text-title: #0f172a;       
-            --text-body: #475569;        
-            --border-soft: #cbd5e1;      
-            --tag-bg: #eff6ff;
-            --tag-text: #1d4ed8;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
-            background-color: var(--main-bg);
-            color: var(--text-body);
-            line-height: 1.5;
-            padding: 30px 15px;
-        }
-
-        .wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Верхняя плашка с новой версткой */
-        .header-box {
-            background: linear-gradient(135deg, #1e3a8a, #2563eb);
-            color: #ffffff;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: left;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-        }
-
-        .header-box h1 {
-            font-size: 1.8rem;
-            margin-bottom: 6px;
-            font-weight: 700;
-        }
-
-        .header-box p {
-            color: #93c5fd;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        .status-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            color: #ffffff;
-            backdrop-filter: blur(4px);
-        }
-
-        /* Карточки */
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .block-card {
-            background: var(--card-bg);
-            border-radius: 10px;
-            padding: 20px;
-            border-left: 4px solid var(--accent-primary); /* Синий акцент слева */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-
-        h2 {
-            color: var(--text-title);
-            font-size: 1.15rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        p {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-        }
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-
-        .path-code {
-            background-color: var(--tag-bg);
-            color: var(--tag-text);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Consolas', monospace;
-            font-size: 0.88em;
-            border: 1px solid #bfdbfe;
-        }
-
-        /* Нумерованный список вместо маркеров */
-        .steps-list {
-            padding-left: 0;
-            list-style: none;
-            counter-reset: step-counter;
-        }
-
-        .steps-list li {
-            counter-increment: step-counter;
-            position: relative;
-            padding-left: 32px;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-        }
-
-        .steps-list li:last-child {
-            margin-bottom: 0;
-        }
-
-        .steps-list li::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 2px;
-            width: 20px;
-            height: 20px;
-            background-color: var(--accent-light);
-            color: var(--accent-primary);
-            font-weight: bold;
-            font-size: 0.8rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 25px;
-            color: #94a3b8;
-            font-size: 0.85rem;
-        }
-    </style>
+    <title>My profile</title>
 </head>
+
 <body>
 
-    <div class="wrapper">
+
+    <header>
+        <h1>Ayana</h1>
+    </header>
+
+
+    
+    <main>
+
         
-        <!-- Верхний баннер с изменившимся стилем -->
-        <div class="header-box">
-            <h1>Практическая работа №1</h1>
-            <p>Запуск и тестирование локального сервера Apache</p>
-            <div class="status-tag">
-                <span>●</span> Статус: Сервер активен
-            </div>
-        </div>
+        <section>
+            <h2>About Me</h2>
 
-        <div class="info-grid">
-            <!-- Карточка 1: Новый порядок/иконки/текст -->
-            <div class="block-card">
-                <h2>💻 Информация о разработчике</h2>
-                <p><strong>Имя студента:</strong> Шайдуллаева Амина </p>
-                <p><strong>Операционная система:</strong> Windows 11</p>
-                <p><strong>Серверное ПО:</strong> Apache (из пакета XAMPP)</p>
-                <p><strong>Рабочий каталог:</strong> <span class="path-code">C:\xampp\htdocs\labsite</span></p>
-            </div>
-
-            <!-- Карточка 2 -->
-            <div class="block-card">
-                <h2>📌 Поставленная задача</h2>
-                <p>
-                    Развернуть локальное окружение Apache, разместить веб-страницу в рабочем каталоге и организовать к ней доступ по сети Wi-Fi через IPv4.
-                </p>
-            </div>
-        </div>
-
-        <!-- Карточка 3: Нумерованный список с нумерацией в кружочках -->
-        <div class="block-card" style="margin-bottom: 15px;">
-            <h2>📋 Порядок выполнения</h2>
-            <ol class="steps-list">
-                <li><strong>Старт службы:</strong> Запущен модуль Apache через панель управления XAMPP.</li>
-                <li><strong>Публикация:</strong> В директории <code>htdocs</code> создана папка <code>labsite</code> с файлом <code>index.html</code>.</li>
-                <li><strong>Определение IP:</strong> С помощью команды <code>ipconfig</code> в консоли найден сетевой IPv4-адрес.</li>
-                <li><strong>Проверка доступа:</strong> Выполнено успешное подключение к сайту с внешних устройств в локальной сети.</li>
-            </ol>
-        </div>
-
-        <!-- Карточка 4 -->
-        <div class="block-card">
-            <h2>🔗 Локальный URL-адрес</h2>
             <p>
-                Для просмотра сайта с других устройств в текущей Wi-Fi сети используйте адрес:
+                
+            </p> My name is Ayana, 18 years old.I have been involved in music for 15 years and play various instruments—such as the piano, cello, drums, and guitar—and I enjoy playing volleyball with friends.
+
+           
+            <img src="photo_2026-09-30_13-09-44.jpg"
+                 alt="Student photo"
+                 width="300">
+        </section>
+
+
+       
+        <section>
+            <h2>My Social Media</h2>
+
+            <a href="https://www.instagram.com/ayonnka?stkn=ZXI0M240cDIyNjN5">Instagram</a>
+
+            <br>
+
+            <a href="https://t.me/ayonnka">Telegram</a>
+
+            <br>
+
+        </section>
+
+
+       
+        <section>
+            <h2>Contact Me</h2>
+
+            <form>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
                 <br><br>
-                <span class="path-code">http://[ВАШ_IP_АДРЕС]/labsite</span>
-            </p>
-        </div>
 
-        <footer>
-            <p>© 2026 Шайдуллаева А. • Учебный проект</p>
-        </footer>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
 
-    </div>
+                <br><br>
+
+                <input type="submit" value="Submit">
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    
+    <footer>
+        <p>© 2026 Ayana. All rights reserved</p>
+    </footer>
 
 </body>
+
 </html>
